@@ -1,10 +1,16 @@
 /* styles.css */
+:root {
+    --icon-website: url('/images/web.png');
+    --icon-github: url('/images/github.png');
+    --icon-twitter: url('/images/twitter.svg');
+}
+
 body {
     font-family: 'JetBrains Mono', monospace;
     background-color: #f0f0f0;
     color: #000;
     line-height: 1.6;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -13,10 +19,12 @@ body {
 
 .container {
     max-width: 800px;
+    width: 100%;
     margin: 0 auto;
     background-color: #fff;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ddd;
+    box-sizing: border-box;
 }
 
 .folder, .file {
@@ -44,10 +52,12 @@ body {
 
 h1, h2 {
     color: #800080;
+    word-wrap: break-word;
 }
 
 .member {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
 }
@@ -55,16 +65,12 @@ h1, h2 {
 .member img {
     width: 100px;
     height: 100px;
-    margin-right: 20px;
+    margin-bottom: 10px;
     object-fit: cover;
 }
 
 .member-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100px;
+    text-align: left;
 }
 
 .member-info h3 {
@@ -81,40 +87,6 @@ h1, h2 {
     margin-top: 10px;
 }
 
-.social-icons img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-}
-
-footer {
-    background-color: #f0f0f0;
-    padding: 20px 0;
-    margin-top: 40px;
-    text-align: center;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.socials a {
-    color: #00f;
-    text-decoration: none;
-}
-
-.socials a:hover {
-    text-decoration: underline;
-}
-
-:root {
-    --icon-website: url('/images/web.png');
-    --icon-github: url('/images/github.png');
-    --icon-twitter: url('/images/twitter.svg');
-}
-
 .social-icons a {
     display: inline-block;
     width: 20px;
@@ -128,3 +100,51 @@ footer {
 .social-icons .icon-website { background-image: var(--icon-website); }
 .social-icons .icon-github { background-image: var(--icon-github); }
 .social-icons .icon-twitter { background-image: var(--icon-twitter); }
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.socials a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .member {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .member img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .member-info {
+        flex: 1;
+    }
+}
