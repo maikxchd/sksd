@@ -9,12 +9,13 @@ body {
     font-family: 'JetBrains Mono', monospace;
     background-color: #f0f0f0;
     color: #000;
-    line-height: 1.6;
+    line-height: 1.4;
     padding: 10px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
+    font-size: 14px;
 }
 
 .container {
@@ -22,7 +23,7 @@ body {
     width: 100%;
     margin: 0 auto;
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     box-sizing: border-box;
 }
@@ -31,6 +32,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .folder::before {
@@ -50,9 +52,18 @@ body {
     color: #666;
 }
 
-h1, h2 {
+h1 {
     color: #800080;
     word-wrap: break-word;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #800080;
+    word-wrap: break-word;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .member {
@@ -63,8 +74,8 @@ h1, h2 {
 }
 
 .member img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
     object-fit: cover;
 }
@@ -77,21 +88,23 @@ h1, h2 {
     margin-top: 0;
     margin-bottom: 5px;
     color: #800080;
+    font-size: 16px;
 }
 
 .member-info p {
     margin: 0 0 5px 0;
+    font-size: 12px;
 }
 
 .social-icons {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .social-icons a {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -103,16 +116,17 @@ h1, h2 {
 
 footer {
     background-color: #f0f0f0;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 10px 0;
+    margin-top: 20px;
     text-align: center;
     width: 100%;
+    font-size: 12px;
 }
 
 .socials {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -125,6 +139,37 @@ footer {
     text-decoration: underline;
 }
 
+@media (min-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .member-info h3 {
+        font-size: 18px;
+    }
+
+    .member-info p {
+        font-size: 14px;
+    }
+
+    .social-icons a {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 @media (min-width: 768px) {
     body {
         padding: 20px;
@@ -134,17 +179,35 @@ footer {
         padding: 20px;
     }
 
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
     .member {
         flex-direction: row;
         align-items: flex-start;
     }
 
     .member img {
+        width: 100px;
+        height: 100px;
         margin-right: 20px;
         margin-bottom: 0;
     }
 
     .member-info {
         flex: 1;
+    }
+
+    .member-info h3 {
+        font-size: 20px;
+    }
+
+    .member-info p {
+        font-size: 16px;
     }
 }
